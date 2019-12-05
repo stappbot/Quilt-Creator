@@ -1,0 +1,115 @@
+body {
+  padding: 1em;
+}
+
+#parameters {
+  margin: 1em 0;
+}
+
+.square {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: block;
+  float: left;
+  border: 1px solid black;
+  overflow: hidden;
+  background-color: antiquewhite;
+}
+
+.row {
+  float: left;
+  clear: both;
+}
+
+.solid {
+  background-color: black;
+}
+
+.tophalfcolor::after,
+.bottomhalfcolor::after,
+.lefthalfcolor::after,
+.righthalfcolor::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  background-color: black;
+}
+
+.bottomhalfcolor::after {
+  top: 50%;
+}
+
+.lefthalfcolor::after,
+.righthalfcolor::after {
+  width: 50%;
+  height: 100%;
+  left: 0;
+}
+
+.righthalfcolor::after {
+  left: 50%;
+}
+
+.topleftcolor::after,
+.bottomrightcolor::after,
+.bottomleftcolor::after,
+.toprightcolor::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.topleftcolor::after {
+  border-top: 100px solid black;
+  border-right: 100px solid antiquewhite;
+}
+
+.toprightcolor::after {
+  border-top: 100px solid black;
+  border-left: 100px solid antiquewhite;
+}
+
+.bottomrightcolor::after {
+  border-bottom: 100px solid black;
+  border-right: 100px solid antiquewhite;
+}
+
+.bottomleftcolor::after {
+  border-bottom: 100px solid black;
+  border-left: 100px solid antiquewhite;
+}
+
+.topLeftRounded::after,
+.topRightRounded::after,
+.bottomLeftRounded::after,
+.bottomRightRounded::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: black;
+  border-radius: 100%;
+}
+
+.topLeftRounded::after {
+  right: -100%;
+}
+
+.topRightRounded::after {
+  left: -100%;
+}
+
+.bottomLeftRounded::after {
+  right: -100%;
+  top: -100%;
+}
+
+.bottomRightRounded::after {
+  left: -100%;
+  top: -100%;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quilt Creator</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="parameters">
+      <input type="number" min="1" name="width" value="6" max="10" />
+      <input type="number" min="1" name="height" value="6" max="12" />
+      <label><input type="checkbox" name="rounded" /> Rounded</label>
+      <button type="submit">Generate</button>
+    </form>
+    <div id="box"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
